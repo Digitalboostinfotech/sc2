@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Wedding Invitation | Sathyaraj ❤️ Chithra</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Font Pairing:
+       Prospect-style (elegant serif) - Cinzel
+       Romantic Script - Great Vibes
+       Whimsical - Caveat
+  -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Great+Vibes&family=Caveat&display=swap" rel="stylesheet" />
+
+  <style>
+    body {
+      margin: 0;
+      background: linear-gradient(to right, #2c0000, #000);
+      font-family: 'Cinzel', serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
+      color: #fffde7;
+      flex-direction: column;
+    }
+
+    .scene {
+      width: 360px;
+      height: 640px;
+      perspective: 1200px;
+      position: relative;
+    }
+
+    .card {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      transform-style: preserve-3d;
+      transition: transform 1.2s ease;
+      cursor: pointer;
+    }
+
+    .card.flip {
+      transform: rotateY(180deg);
+    }
+
+    .card-face {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 20px;
+      backface-visibility: hidden;
+      border: 4px solid gold;
+      box-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
+      padding: 2rem;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .front {
+      background: url('https://i.imgur.com/dzFTLNh.jpg') no-repeat center center/cover;
+    }
+
+    .back {
+      background: rgba(0, 0, 0, 0.85);
+      transform: rotateY(180deg);
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      font-family: 'Cinzel', serif;
+      margin: 0.5rem 0;
+      animation: glow 1.5s ease-in-out infinite alternate;
+    }
+
+    h2 {
+      font-size: 2rem;
+      color: gold;
+      margin: 0.5rem 0;
+      animation: glow 1.5s ease-in-out infinite alternate;
+    }
+
+    #sparkleName {
+      font-family: 'Great Vibes', cursive;
+      font-size: 2.2rem;
+      color: gold;
+    }
+
+    .whimsical-text {
+      font-family: 'Caveat', cursive;
+      font-size: 2.4rem;
+      color: #ffd700;
+      animation: glow 1.5s ease-in-out infinite alternate;
+    }
+
+    p {
+      margin: 0.5rem 0;
+      font-size: 1.1rem;
+      font-family: 'Cinzel', serif;
+    }
+
+    .qr {
+      margin-top: 1rem;
+      animation: glowBorder 1.5s infinite alternate;
+      padding: 10px;
+      border-radius: 10px;
+      border: 3px solid gold;
+    }
+
+    .qr img {
+      width: 150px;
+      height: 150px;
+    }
+
+    .qr p {
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+      color: #ffe;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 10px gold; }
+      to { text-shadow: 0 0 25px gold; }
+    }
+
+    @keyframes glowBorder {
+      from { box-shadow: 0 0 5px gold; }
+      to { box-shadow: 0 0 20px gold; }
+    }
+
+    .sparkle-text {
+      position: relative;
+      display: inline-block;
+    }
+
+    .sparkle {
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      background: radial-gradient(#fff, gold);
+      border-radius: 50%;
+      pointer-events: none;
+      animation: sparkleFade 1s ease-out forwards;
+    }
+
+    @keyframes sparkleFade {
+      0% { transform: scale(2); opacity: 1; }
+      100% { transform: scale(0); opacity: 0; }
+    }
+
+    iframe {
+      margin-top: 1rem;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+  <div class="scene">
+    <div class="card" id="inviteCard">
+      <!-- Front Side -->
+      <div class="card-face front">
+        <h1>Welcome To Our Wedding</h1>
+        <h2 class="sparkle-text" id="sparkleName">Sathyaraj ❤️ Chithra</h2>
+        <p>👇 Tap to view details</p>
+      </div>
+
+      <!-- Back Side -->
+      <div class="card-face back">
+        <h2 class="whimsical-text">Save The Date</h2>
+        <p>📅 28th August 2025</p>
+        <p>🕕 AT 7 to 9:00 AM</p>
+        <p>📍 SS MAHAL, RPM5+39C, Ambur Bypass Rd, Kailasagiri, Tamil Nadu 635808</p>
+        <div class="qr">
+          <p>📌 Scan or Tap for Directions</p>
+          <a href="https://maps.app.goo.gl/8dQC7nSYr1ZCQ3Tg8?g_st=iw" target="_blank">
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://maps.app.goo.gl/8dQC7nSYr1ZCQ3Tg8?g_st=iw" alt="Location QR Code">
+          </a>
+        </div>
+        <p style="margin-top: 1rem;">We look forward to your presence 🙏❤️✨</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- JioSaavn Embed Player -->
+  <iframe src="https://www.jiosaavn.com/embed/artist/satya-yamini-songs/osf6M3osqEg_"
+          width="100%" height="60" frameborder="0" allowfullscreen allow="autoplay">
+  </iframe>
+
+  <script>
+    const card = document.getElementById("inviteCard");
+    const sparkleText = document.getElementById("sparkleName");
+
+    card.addEventListener("click", () => {
+      card.classList.toggle("flip");
+    });
+
+    function spawnSparkle(x, y) {
+      const sparkle = document.createElement("div");
+      sparkle.className = "sparkle";
+      sparkle.style.left = `${x}px`;
+      sparkle.style.top = `${y}px`;
+      sparkleText.appendChild(sparkle);
+      setTimeout(() => sparkle.remove(), 1000);
+    }
+
+    function sparkleTrailEffect(element) {
+      const rect = element.getBoundingClientRect();
+      const width = rect.width;
+      const height = rect.height;
+
+      let count = 0;
+      const interval = setInterval(() => {
+        const offsetX = Math.random() * width;
+        const offsetY = Math.random() * height;
+        spawnSparkle(offsetX, offsetY);
+        count++;
+        if (count > 50) clearInterval(interval);
+      }, 50);
+    }
+
+    window.addEventListener("load", () => {
+      sparkleTrailEffect(sparkleText);
+    });
+  </script>
+</body>
+</html>
