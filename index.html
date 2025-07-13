@@ -4,30 +4,30 @@
   <meta charset="UTF-8" />
   <title>Wedding Invitation | Sathyaraj ❤️ Chithra</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- Font Pairing:
-       Prospect-style (elegant serif) - Cinzel
-       Romantic Script - Great Vibes
-       Whimsical - Caveat
-  -->
+  <!-- Elegant Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Great+Vibes&family=Caveat&display=swap" rel="stylesheet" />
-
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
+      padding: 0;
       background: linear-gradient(to right, #2c0000, #000);
       font-family: 'Cinzel', serif;
       display: flex;
       align-items: center;
       justify-content: center;
-      height: 100vh;
-      overflow: hidden;
-      color: #fffde7;
       flex-direction: column;
+      min-height: 100vh;
+      color: #fffde7;
+      overflow-x: hidden;
     }
 
     .scene {
       width: 360px;
+      max-width: 100%;
       height: 640px;
       perspective: 1200px;
       position: relative;
@@ -55,22 +55,20 @@
       border: 4px solid gold;
       box-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
       padding: 2rem;
-      box-sizing: border-box;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       text-align: center;
+      background: rgba(0, 0, 0, 0.85);
     }
 
     .back {
-      background: rgba(0, 0, 0, 0.85);
       transform: rotateY(180deg);
     }
 
     h1 {
       font-size: 1.8rem;
-      font-family: 'Cinzel', serif;
       margin: 0.5rem 0;
       animation: glow 1.5s ease-in-out infinite alternate;
     }
@@ -98,7 +96,6 @@
     p {
       margin: 0.5rem 0;
       font-size: 1.1rem;
-      font-family: 'Cinzel', serif;
     }
 
     .qr {
@@ -149,12 +146,6 @@
       0% { transform: scale(2); opacity: 1; }
       100% { transform: scale(0); opacity: 0; }
     }
-
-    iframe {
-      margin-top: 1rem;
-      border-radius: 12px;
-      overflow: hidden;
-    }
   </style>
 </head>
 <body>
@@ -183,11 +174,6 @@
       </div>
     </div>
   </div>
-
-  <!-- JioSaavn Embed Player -->
-  <iframe src="https://www.jiosaavn.com/embed/artist/satya-yamini-songs/osf6M3osqEg_"
-          width="100%" height="60" frameborder="0" allowfullscreen allow="autoplay">
-  </iframe>
 
   <script>
     const card = document.getElementById("inviteCard");
